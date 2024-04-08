@@ -36,7 +36,7 @@
       "runtime": "101",
       "capacity": 40,
       "showtime": "09:00PM",
-      "tickets_sold": 31,
+      "tickets_sold": 32,
       "description": "A young man meets a farm girl who is actually a witch.",
       "poster": "https://www.gstatic.com/tv/thumb/v22vodart/43468/p43468_v_v8_aa.jpg"
     },
@@ -96,7 +96,7 @@
       "runtime": "122",
       "capacity": 50,
       "showtime": "10:00PM",
-      "tickets_sold": 44,
+      "tickets_sold": 46,
       "description": "Giant spiders from another dimension invade Wisconsin.",
       "poster": "https://www.gstatic.com/tv/thumb/v22vodart/42171/p42171_v_v8_ab.jpg"
     },
@@ -172,6 +172,21 @@
       "id": "6b08",
       "film_id": "6",
       "number_of_tickets": 1
+    },
+    {
+      "id": "145c",
+      "film_id": "4",
+      "number_of_tickets": 1
+    },
+    {
+      "id": "2aab",
+      "film_id": "10",
+      "number_of_tickets": 1
+    },
+    {
+      "id": "667b",
+      "film_id": "10",
+      "number_of_tickets": 2
     }
   ]
 }
