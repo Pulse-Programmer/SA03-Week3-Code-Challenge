@@ -11,9 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //load info of 1st movie upon page load
   function movieData() {
-    fetch(
-      `https://my-json-server.typicode.com/Pulse-Programmer/db-json-server-SA3/films`,
-    )
+    fetch(`http://localhost:3000/films`)
       .then((res) => res.json())
       .then((data) => {
         function firstMovie() {
@@ -53,7 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
             ticketNum.textContent -= 1;
             let numberOfTicketsSold = t - ticketNum.textContent;
             // Access record and update ticketsSold and movieId
-
             data.forEach((record) => {
               if (docTitle.textContent === record.title) {
                 ticketsSold = record.tickets_sold + numberOfTicketsSold; //Adds the difference to the earlier retrieved record of tickets sold.
@@ -106,7 +103,6 @@ document.addEventListener("DOMContentLoaded", () => {
               t = ticketNum.textContent; //resets value of t to the selected movie's value
             }
           });
-          // console.log(data[0].title);
         });
       }); //data
   } //function movieData
@@ -115,16 +111,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //PATCH request function
   function updateTicketsSold(movie_Id, soldTickets) {
-    fetch(
-      `https://my-json-server.typicode.com/Pulse-Programmer/db-json-server-SA3/films/${movie_Id}`,
-      {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ tickets_sold: soldTickets }),
+    fetch(`http://localhost:3000/films/${movie_Id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
       },
-    );
+      body: JSON.stringify({ tickets_sold: soldTickets }),
+    });
     // .then((res) => res.json())
     // .then((patchResponse) => console.log(patchResponse));
   }
@@ -139,22 +132,16 @@ document.addEventListener("DOMContentLoaded", () => {
         number_of_tickets: no_tickets,
       }),
     };
-    fetch(
-      "https://my-json-server.typicode.com/Pulse-Programmer/db-json-server-SA3/tickets/",
-      postObj,
-    );
+    fetch("http://localhost:3000/tickets/", postObj);
   }
 
   //DELETE request function
   function handleDelete(movie_Id) {
-    fetch(
-      `https://my-json-server.typicode.com/Pulse-Programmer/db-json-server-SA3/films/${movie_Id}`,
-      {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-        },
+    fetch(`http://localhost:3000/films/${movie_Id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
       },
-    );
+    });
   }
 });
