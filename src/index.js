@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const ticketNum = document.querySelector("#ticket_num");
   const films = document.querySelector("ul#films");
   const buyBtn = document.querySelector("#buy_ticket");
+  const imgPoster = document.querySelector("img#poster");
 
   //load info of 1st movie upon page load
   function movieData() {
@@ -22,6 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
           showtime.textContent = dataOne.showtime;
           let remainingTickets = dataOne.capacity - dataOne.tickets_sold;
           ticketNum.textContent = remainingTickets;
+          imgPoster.src = dataOne.poster;
+          imgPoster.alt = dataOne.title;
         }
         firstMovie();
 
@@ -46,15 +49,15 @@ document.addEventListener("DOMContentLoaded", () => {
           if (ticketNum.textContent > 0) {
             // Inside the event listener, checks if the ticket can be bought
             ticketNum.textContent -= 1;
-            let numberOfTickets = t - ticketNum.textContent;
+            let numberOfTicketsSold = t - ticketNum.textContent;
             // Access record and update ticketsSold and movieId
             data.forEach((record) => {
               if (docTitle.textContent === record.title) {
-                ticketsSold = record.tickets_sold + numberOfTickets; //Adds the difference to the earlier retrieved record of tickets sold.
+                ticketsSold = record.tickets_sold + numberOfTicketsSold; //Adds the difference to the earlier retrieved record of tickets sold.
                 let movieId = record.id;
 
                 updateTicketsSold(movieId, ticketsSold); //tickets sold is persisted to the server
-                postNewTicket(movieId, numberOfTickets);
+                postNewTicket(movieId, numberOfTicketsSold);
               }
             });
           } else {
@@ -66,6 +69,22 @@ document.addEventListener("DOMContentLoaded", () => {
               }
             });
           }
+        });
+
+        const deleteBtns = films.querySelectorAll("button");
+        deleteBtns.forEach((item) => {
+          item.addEventListener("click", (e) => {
+            e.target.parentNode.remove();
+            data.forEach((record) => {
+              if (
+                e.target.parentNode.textContent.replace("  Delete", "") ===
+                record.title
+              ) {
+                let movieId = record.id;
+                handleDelete(movieId);
+              }
+            });
+          });
         });
 
         //*** */
@@ -102,6 +121,9 @@ document.addEventListener("DOMContentLoaded", () => {
               showtime.textContent = item.showtime;
               let remainingTickets = item.capacity - item.tickets_sold;
               ticketNum.textContent = remainingTickets;
+              imgPoster.src = item.poster;
+              imgPoster.alt = item.title;
+              t = ticketNum.textContent; //resets value of t to the selected movie's value
             }
           });
           // console.log(data[0].title);
@@ -111,6 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   movieData();
 
+  //PATCH request function
   function updateTicketsSold(movie_Id, soldTickets) {
     fetch(`http://localhost:3000/films/${movie_Id}`, {
       method: "PATCH",
@@ -123,6 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // .then((patchResponse) => console.log(patchResponse));
   }
 
+  //POST request function
   function postNewTicket(movie_Id, no_tickets) {
     const postObj = {
       method: "POST",
@@ -133,5 +157,15 @@ document.addEventListener("DOMContentLoaded", () => {
       }),
     };
     fetch("http://localhost:3000/tickets/", postObj);
+  }
+
+  //DELETE request function
+  function handleDelete(movie_Id) {
+    fetch(`http://localhost:3000/films/${movie_Id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
   }
 });
