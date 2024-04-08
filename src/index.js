@@ -11,7 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //load info of 1st movie upon page load
   function movieData() {
-    fetch(`http://localhost:3000/films`)
+    fetch(
+      `https://my-json-server.typicode.com/Pulse-Programmer/db-json-server-SA3/films`,
+    )
       .then((res) => res.json())
       .then((data) => {
         function firstMovie() {
@@ -111,13 +113,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //PATCH request function
   function updateTicketsSold(movie_Id, soldTickets) {
-    fetch(`http://localhost:3000/films/${movie_Id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
+    fetch(
+      `https://my-json-server.typicode.com/Pulse-Programmer/db-json-server-SA3/films/${movie_Id}`,
+      {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ tickets_sold: soldTickets }),
       },
-      body: JSON.stringify({ tickets_sold: soldTickets }),
-    });
+    );
     // .then((res) => res.json())
     // .then((patchResponse) => console.log(patchResponse));
   }
@@ -132,16 +137,22 @@ document.addEventListener("DOMContentLoaded", () => {
         number_of_tickets: no_tickets,
       }),
     };
-    fetch("http://localhost:3000/tickets/", postObj);
+    fetch(
+      "https://my-json-server.typicode.com/Pulse-Programmer/db-json-server-SA3/tickets/",
+      postObj,
+    );
   }
 
   //DELETE request function
   function handleDelete(movie_Id) {
-    fetch(`http://localhost:3000/films/${movie_Id}`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
+    fetch(
+      `https://my-json-server.typicode.com/Pulse-Programmer/db-json-server-SA3/films/${movie_Id}`,
+      {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
       },
-    });
+    );
   }
 });
