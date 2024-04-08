@@ -53,6 +53,8 @@ document.addEventListener("DOMContentLoaded", () => {
             ticketNum.textContent -= 1;
             let numberOfTicketsSold = t - ticketNum.textContent;
             // Access record and update ticketsSold and movieId
+
+            alert("You booked a slot. Enjoy the show!");
             data.forEach((record) => {
               if (docTitle.textContent === record.title) {
                 ticketsSold = record.tickets_sold + numberOfTicketsSold; //Adds the difference to the earlier retrieved record of tickets sold.
