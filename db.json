@@ -76,7 +76,7 @@
       "runtime": "115",
       "capacity": 40,
       "showtime": "08:30PM",
-      "tickets_sold": 32,
+      "tickets_sold": 33,
       "description": "On an isolated island, a small group of people are terrorized by giant voracious shrews in the midst of a hurricane.",
       "poster": "https://www.gstatic.com/tv/thumb/v22vodart/1466/p1466_v_v8_ab.jpg"
     },
@@ -150,6 +150,13 @@
       "tickets_sold": 33,
       "description": "Delinquent teen-agers ingest a substance and grow thirty feet tall, then proceed to take over a small town.",
       "poster": "https://www.gstatic.com/tv/thumb/v22vodart/37991/p37991_v_v8_aa.jpg"
+    }
+  ],
+  "tickets": [
+    {
+      "id": "8a5a",
+      "film_id": "8",
+      "number_of_tickets": 1
     }
   ]
 }
