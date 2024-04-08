@@ -103,7 +103,6 @@ document.addEventListener("DOMContentLoaded", () => {
               t = ticketNum.textContent; //resets value of t to the selected movie's value
             }
           });
-          // console.log(data[0].title);
         });
       }); //data
   } //function movieData

@@ -16,7 +16,7 @@
       "runtime": "118",
       "capacity": 50,
       "showtime": "06:45PM",
-      "tickets_sold": 25,
+      "tickets_sold": 26,
       "description": "A family gets lost on the road and stumbles upon a hidden, underground, devil-worshiping cult led by the fearsome Master and his servant Torgo.",
       "poster": "https://www.gstatic.com/tv/thumb/v22vodart/47781/p47781_v_v8_ac.jpg"
     },
@@ -26,7 +26,7 @@
       "runtime": "93",
       "capacity": 50,
       "showtime": "09:30PM",
-      "tickets_sold": 4,
+      "tickets_sold": 11,
       "description": "An inventor comes up with a time machine, but must prevent its abuse at the hands of an evil C.E.O.",
       "poster": "https://www.gstatic.com/tv/thumb/v22vodart/23342/p23342_v_v8_ab.jpg"
     },
@@ -36,7 +36,7 @@
       "runtime": "101",
       "capacity": 40,
       "showtime": "09:00PM",
-      "tickets_sold": -57,
+      "tickets_sold": -51,
       "description": "A young man meets a farm girl who is actually a witch.",
       "poster": "https://www.gstatic.com/tv/thumb/v22vodart/43468/p43468_v_v8_aa.jpg"
     },
@@ -46,7 +46,7 @@
       "runtime": "96",
       "capacity": 50,
       "showtime": "03:30PM",
-      "tickets_sold": 37,
+      "tickets_sold": 38,
       "description": "The Martians kidnap Santa Claus because there is nobody on Mars to give their children presents.",
       "poster": "https://www.gstatic.com/tv/thumb/v22vodart/4232/p4232_v_v8_aa.jpg"
     },
@@ -86,7 +86,7 @@
       "runtime": "99",
       "capacity": 40,
       "showtime": "07:30PM",
-      "tickets_sold": 30,
+      "tickets_sold": 31,
       "description": "A saboteur posing as a scientist strives to destroy the world's first space station.",
       "poster": "https://www.gstatic.com/tv/thumb/v22vodart/46755/p46755_v_v8_aa.jpg"
     },
@@ -154,93 +154,88 @@
   ],
   "tickets": [
     {
-      "id": "595b",
-      "film_id": "8",
-      "number_of_tickets": -9
-    },
-    {
-      "id": "2cff",
-      "film_id": "8",
-      "number_of_tickets": -8
-    },
-    {
-      "id": "6296",
-      "film_id": "4",
-      "number_of_tickets": -12
-    },
-    {
-      "id": "e307",
-      "film_id": "4",
-      "number_of_tickets": -24
-    },
-    {
-      "id": "2cc7",
-      "film_id": "5",
-      "number_of_tickets": -21
-    },
-    {
-      "id": "0786",
-      "film_id": "5",
-      "number_of_tickets": -20
-    },
-    {
-      "id": "890a",
-      "film_id": "5",
-      "number_of_tickets": -19
-    },
-    {
-      "id": "8c52",
-      "film_id": "5",
-      "number_of_tickets": -40
-    },
-    {
-      "id": "2490",
-      "film_id": "5",
-      "number_of_tickets": -39
-    },
-    {
-      "id": "4fd5",
-      "film_id": "5",
-      "number_of_tickets": -38
-    },
-    {
-      "id": "a515",
-      "film_id": "5",
-      "number_of_tickets": -37
-    },
-    {
-      "id": "d80c",
-      "film_id": "4",
-      "number_of_tickets": -48
-    },
-    {
-      "id": "e5c7",
+      "id": "bab2",
       "film_id": "3",
-      "number_of_tickets": -23
+      "number_of_tickets": 1
     },
     {
-      "id": "1098",
+      "id": "ed4c",
       "film_id": "3",
-      "number_of_tickets": -22
+      "number_of_tickets": 2
     },
     {
-      "id": "ba86",
+      "id": "dd9c",
+      "film_id": "3",
+      "number_of_tickets": 3
+    },
+    {
+      "id": "6ad6",
       "film_id": "5",
       "number_of_tickets": 1
     },
     {
-      "id": "e3f9",
-      "film_id": "5",
+      "id": "2a95",
+      "film_id": "3",
+      "number_of_tickets": 1
+    },
+    {
+      "id": "b1d9",
+      "film_id": "3",
       "number_of_tickets": 2
     },
     {
-      "id": "5e02",
-      "film_id": "5",
+      "id": "2d2d",
+      "film_id": "3",
       "number_of_tickets": 3
     },
     {
-      "id": "2d10",
-      "film_id": "5",
+      "id": "0475",
+      "film_id": "2",
+      "number_of_tickets": 1
+    },
+    {
+      "id": "c842",
+      "film_id": "3",
+      "number_of_tickets": 1
+    },
+    {
+      "id": "c528",
+      "film_id": "4",
+      "number_of_tickets": 1
+    },
+    {
+      "id": "d650",
+      "film_id": "4",
+      "number_of_tickets": 1
+    },
+    {
+      "id": "d6e5",
+      "film_id": "4",
+      "number_of_tickets": 2
+    },
+    {
+      "id": "55ee",
+      "film_id": "4",
+      "number_of_tickets": 3
+    },
+    {
+      "id": "31bf",
+      "film_id": "4",
+      "number_of_tickets": 1
+    },
+    {
+      "id": "83ec",
+      "film_id": "9",
+      "number_of_tickets": 1
+    },
+    {
+      "id": "cc23",
+      "film_id": "9",
+      "number_of_tickets": 1
+    },
+    {
+      "id": "a576",
+      "film_id": "4",
       "number_of_tickets": 1
     }
   ]
