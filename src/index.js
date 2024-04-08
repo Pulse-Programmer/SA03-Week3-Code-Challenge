@@ -57,7 +57,12 @@ document.addEventListener("DOMContentLoaded", () => {
             });
           } else {
             buyBtn.textContent = "sold-out";
-            const filmsArr = films.childNodes;
+            const filmsArr = films.querySelectorAll("li");
+            filmsArr.forEach((film) => {
+              if (film.textContent.includes(docTitle.textContent)) {
+                film.classList.add("sold-out");
+              }
+            });
 
             // for (let i = 3; i < filmsArr; i++) {
             //   console.log(filmsArr[i].textContent);
