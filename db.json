@@ -26,7 +26,7 @@
       "runtime": "93",
       "capacity": 50,
       "showtime": "09:30PM",
-      "tickets_sold": 31,
+      "tickets_sold": 33,
       "description": "An inventor comes up with a time machine, but must prevent its abuse at the hands of an evil C.E.O.",
       "poster": "https://www.gstatic.com/tv/thumb/v22vodart/23342/p23342_v_v8_ab.jpg"
     },
@@ -56,7 +56,7 @@
       "runtime": "112",
       "capacity": 30,
       "showtime": "10:30PM",
-      "tickets_sold": 16,
+      "tickets_sold": 17,
       "description": "A young man is transformed into a hideous 'moon beast' due to a meteor fragment lodged in his body.",
       "poster": "https://www.gstatic.com/tv/thumb/v22vodart/39804/p39804_v_v8_ab.jpg"
     },
@@ -156,6 +156,21 @@
     {
       "id": "8a5a",
       "film_id": "8",
+      "number_of_tickets": 1
+    },
+    {
+      "id": "f49b",
+      "film_id": "3",
+      "number_of_tickets": 1
+    },
+    {
+      "id": "6365",
+      "film_id": "3",
+      "number_of_tickets": 2
+    },
+    {
+      "id": "6b08",
+      "film_id": "6",
       "number_of_tickets": 1
     }
   ]
