@@ -40,6 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
         //Buy tickets
         let ticketsSold;
         let t = ticketNum.textContent; //saves or tracks original number before clicking on buy ticket button
+        const filmsArr = document.querySelectorAll("li");
+
         buyBtn.addEventListener("click", () => {
           if (ticketNum.textContent > 0) {
             // Inside the event listener, checks if the ticket can be bought
@@ -57,20 +59,52 @@ document.addEventListener("DOMContentLoaded", () => {
             });
           } else {
             buyBtn.textContent = "sold-out";
-            const filmsArr = films.querySelectorAll("li");
+
             filmsArr.forEach((film) => {
               if (film.textContent.includes(docTitle.textContent)) {
                 film.classList.add("sold-out");
               }
             });
+          }
+        });
 
-            // for (let i = 3; i < filmsArr; i++) {
-            //   console.log(filmsArr[i].textContent);
-            //   if (filmsArr[i].textContent === docTitle.textContent) {
-            //     filmsArr[i].classList.add("sold-out");
-            //   }
-            // }
-          } //If tickets are depleted
+        //*** */
+        // filmsArr.forEach((element) => {
+        //   element.addEventListener("click", () => {
+        //     const movieTitle = element.textContent.replace(" Delete", "");
+
+        //     for (const record of data) {
+        //       //console.log(record.title);
+        //       if (record.title === movieTitle) {
+        //         docTitle.textContent = record.title;
+        //         runtime.textContent = record.runtime;
+        //         info.textContent = record.description;
+        //         showtime.textContent = record.showtime;
+        //         let remainingTickets = record.capacity - record.tickets_sold;
+        //         ticketNum.textContent = remainingTickets;
+        //       }
+        //     }
+        //   });
+        // });
+        // console.log(data);
+        //
+
+        //console.log(record.title);
+
+        films.addEventListener("click", (e) => {
+          let movieTitle = e.target.textContent.replace("  Delete", "");
+
+          data.forEach((item) => {
+            if (item.title === movieTitle) {
+              docTitle.textContent = item.title;
+              runtime.textContent = item.runtime;
+              info.textContent = item.description;
+              showtime.textContent = item.showtime;
+              let remainingTickets = item.capacity - item.tickets_sold;
+              ticketNum.textContent = remainingTickets;
+            }
+          });
+          // console.log(data[0].title);
         });
       }); //data
   } //function movieData
