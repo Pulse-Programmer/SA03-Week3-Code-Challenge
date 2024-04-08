@@ -87,29 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
           });
         });
 
-        //*** */
-        // filmsArr.forEach((element) => {
-        //   element.addEventListener("click", () => {
-        //     const movieTitle = element.textContent.replace(" Delete", "");
-
-        //     for (const record of data) {
-        //       //console.log(record.title);
-        //       if (record.title === movieTitle) {
-        //         docTitle.textContent = record.title;
-        //         runtime.textContent = record.runtime;
-        //         info.textContent = record.description;
-        //         showtime.textContent = record.showtime;
-        //         let remainingTickets = record.capacity - record.tickets_sold;
-        //         ticketNum.textContent = remainingTickets;
-        //       }
-        //     }
-        //   });
-        // });
-        // console.log(data);
-        //
-
-        //console.log(record.title);
-
         films.addEventListener("click", (e) => {
           let movieTitle = e.target.textContent.replace("  Delete", "");
 
