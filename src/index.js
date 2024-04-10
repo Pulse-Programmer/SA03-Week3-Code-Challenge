@@ -104,7 +104,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
           });
         });
-      }); //data
+      })
+      .catch((error) => alert(error.message)); //data
   } //function movieData
 
   movieData();
@@ -117,9 +118,10 @@ document.addEventListener("DOMContentLoaded", () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ tickets_sold: soldTickets }),
-    });
-    // .then((res) => res.json())
-    // .then((patchResponse) => console.log(patchResponse));
+    })
+      .then((res) => res.json())
+      .then((body) => console.log(body))
+      .catch((error) => alert(error.message));
   }
 
   //POST request function
@@ -132,7 +134,10 @@ document.addEventListener("DOMContentLoaded", () => {
         number_of_tickets: no_tickets,
       }),
     };
-    fetch("https://json-server-sa3.onrender.com/tickets/", postObj);
+    fetch("https://json-server-sa3.onrender.com/tickets/", postObj)
+      .then((res) => res.json())
+      .then((body) => console.log(body))
+      .catch((error) => alert(error.message));
   }
 
   //DELETE request function
